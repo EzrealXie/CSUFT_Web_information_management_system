@@ -9,4 +9,9 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <servlet-name>UserLogin</servlet-name>
+    <servlet-class>com.brynhild.ezrealxie.webinfomanagesys.UserLogin</servlet-class>
+    <enabled>true</enabled>
+  </servlet>
 </web-app>

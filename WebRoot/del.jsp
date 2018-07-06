@@ -1,10 +1,16 @@
-<!doctype html>
+<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Login Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<!-- Facebook and Twitter integration -->
+  	<base href="<%=basePath%>">
 	<meta property="og:title" content=""/>
 	<meta property="og:image" content=""/>
 	<meta property="og:url" content=""/>
@@ -14,20 +20,12 @@
 	<meta name="twitter:image" content="" />
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<link rel="shortcut icon" href="favicon.ico">
-
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300" rel="stylesheet" type="text/css">
-	
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
-
-
-	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- Meta tag Keywords -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
@@ -82,7 +80,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
-					<li class="active menu__item menu__item--current"><a class="menu__link scroll" href="########">Login</a></li>
+					<li class="active menu__item menu__item--current"><a class="menu__link scroll" href="########">Del</a></li>
 				  </ul>
 				</div>
 			  </div>
@@ -101,28 +99,20 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<div class="slider-img">
 						<img src="images/bg1.jpg" class="img-responsive" alt="education">
 				<div class="col-md-4 col-md-push-8" style="left: 70%; width: 20%; position: absolute; top: 35%; bottom: 35%;">
-					<form action="http://localhost:8080/CSUFT_Web_information_management_system/servlet/UserLogin" method="get" class="fh5co-form animate-box" data-animate-effect="fadeInRight">
-						<h2>Sign In</h2>
+					<form action="lessonedit" method="post" class="fh5co-form animate-box" data-animate-effect="fadeInRight">
+						<h2>Del Class</h2>
 						<div class="form-group">
-							<label for="username" class="sr-only">Username</label>
-							<input type="text" class="form-control" id="username" name="inputUserName" placeholder="Username" autocomplete="off">
+							<label for=classname class="sr-only">classname</label>
+							<input type="text" class="form-control" id="inputclassname" name="inputclassname" placeholder="Classname" autocomplete="off">
 						</div>
 						<div class="form-group">
 							<label for="password" class="sr-only">Password</label>
-							<input type="password" class="form-control" id="password" name="inputPassword" placeholder="Password" autocomplete="off">
+							<input type="text" class="form-control" id="inputClassNum" name="inputClassNum" placeholder="ClassNum" autocomplete="off">
 						</div>
 						<div class="form-group">
-							<label for="remember"><input type="checkbox" id="remember"> Remember Me</label>
-						</div>
-						<div class="form-group">
-							<p>Not registered? <a href="sign-up3.html">Sign Up</a> | <a href="forgot3.html">Forgot Password?</a></p>
-						</div>
-						<div class="form-group">
-							<input type="submit" value="Sign In" class="btn btn-primary">
+							<input type="submit" value="Del" class="btn btn-primary">
 						</div>
 					</form>
-					<!-- END Sign In Form -->
-
 				</div>
 					</div>
 					
